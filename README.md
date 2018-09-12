@@ -20,7 +20,7 @@
 1. В файле db/db_config.php прописать конфиги для БД.
 2. Запустить dump БД в db/testworktrafgid.sql.
 >Зпросы к бд 
-
+Номер заказа, имя товара, цена, количество, имя оператора за которым числится заказ ,ГДЕ количество товара >2 И id оператора 10 ИЛИ 12
 ``` SQL 
 SELECT requests.id, offers.name as offer_name, requests.price, requests.count, operators.name as operator_name 
 FROM requests
@@ -29,6 +29,7 @@ JOIN operators on operators.id = requests.operator_id
 WHERE ( requests.count > 2 ) AND (operators.id = 10 OR operators.id = 12)
 ```
 ![alt text](views/img/query1.PNG)
+Имя товара, количество товара, и сумма (price) по каждому товару (сгруппировать)
 ``` SQL
 SELECT offers.name, SUM(requests.count) as count, SUM(requests.price) as sum 
 FROM requests
