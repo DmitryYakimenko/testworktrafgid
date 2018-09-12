@@ -20,6 +20,7 @@
 1. В файле db/db_config.php прописать конфиги для БД.
 2. Запустить dump БД в db/testworktrafgid.sql.
 >Зпросы к бд 
+
 Номер заказа, имя товара, цена, количество, имя оператора за которым числится заказ ,ГДЕ количество товара >2 И id оператора 10 ИЛИ 12
 ``` SQL 
 SELECT requests.id, offers.name as offer_name, requests.price, requests.count, operators.name as operator_name 
