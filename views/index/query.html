@@ -1,0 +1,16 @@
+<div>
+    <table class="table table-striped">
+        <tr>
+            <? foreach($data['keys'] as $key){?>
+                <th><?=$key?></th>
+            <?php } ?>
+        </tr>
+        <?php foreach($data['query'] as $item){?>
+        <tr>
+            <?php foreach($data['keys'] as $key){?>
+                <td name="<?=$key?>"><?=$item[$key]?></td>
+            <?php } ?>
+        </tr>
+        <?php } ?>
+    </table>
+</div>
